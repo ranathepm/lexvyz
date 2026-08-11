@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import { AudioDemoPlayer } from "./audio-demo-player";
 
 const words = ["client", "case", "lead", "consult"];
 
@@ -193,6 +194,15 @@ export function HeroSection() {
               </span>
             </span>
           </h1>
+        </div>
+
+        {/* Audio demo player — real AI intake call (afterhour.ai style) */}
+        <div
+          className={`mb-12 transition-all duration-1000 delay-300 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          <AudioDemoPlayer />
         </div>
         </div>
       </div>

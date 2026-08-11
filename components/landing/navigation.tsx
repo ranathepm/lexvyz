@@ -51,7 +51,7 @@ export function Navigation() {
               src="/images/lexvyz-logo.png"
               alt="LEXVYZ"
               className={`transition-all duration-500 object-contain ${
-                isScrolled ? "h-6" : "h-8"
+                isScrolled ? "h-10" : "h-12"
               }`}
             />
           </a>

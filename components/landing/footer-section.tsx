@@ -119,7 +119,7 @@ export function FooterSection() {
                 <img
                   src="/images/lexvyz-logo.png"
                   alt="LEXVYZ"
-                  className="h-7 object-contain"
+                  className="h-12 object-contain"
                 />
               </a>
 
