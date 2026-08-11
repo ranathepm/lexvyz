@@ -116,12 +116,15 @@ export function FooterSection() {
             {/* Brand Column */}
             <div className="col-span-2">
               <a href="#" className="inline-flex items-center gap-2 mb-6">
-                <span className="text-2xl font-display text-white">LEXVYZ</span>
-                <span className="text-xs text-white/40 font-mono">.COM</span>
+                <img
+                  src="/images/lexvyz-logo.png"
+                  alt="LEXVYZ"
+                  className="h-7 object-contain"
+                />
               </a>
 
               <p className="text-white/50 leading-relaxed mb-8 max-w-xs text-sm">
-                AI automation and digital marketing for law firms. We sell recovered revenue, not AI.
+                Intelligent agents. Real results. AI automation and digital marketing for law firms — we sell recovered revenue, not AI.
               </p>
 
               {/* Social Links */}
@@ -173,7 +176,7 @@ export function FooterSection() {
 
           <div className="flex items-center gap-4 text-sm text-white/30">
             <span className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#eca8d6]" />
+              <span className="w-2 h-2 rounded-full bg-[#ff4d6d]" />
               All systems operational
             </span>
           </div>

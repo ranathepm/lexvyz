@@ -68,7 +68,7 @@ export function HowItWorksSection() {
     <section
       id="how-it-works"
       ref={sectionRef}
-      className="relative py-24 lg:py-32 bg-[oklch(0.09_0.01_260)] text-white overflow-hidden"
+      className="relative py-24 lg:py-32 bg-[#141416] text-white overflow-hidden"
     >
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-white/[0.02] blur-[100px] pointer-events-none" />
 
@@ -104,7 +104,7 @@ export function HowItWorksSection() {
               className="absolute bottom-0 left-0 w-full h-full object-contain object-bottom"
             />
             {/* Fade sur le bord gauche */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.09_0.01_260)] via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#141416] via-transparent to-transparent pointer-events-none" />
           </div>
         </div>
 
@@ -124,13 +124,13 @@ export function HowItWorksSection() {
               {/* Step number with animated line */}
               <div className="flex items-center gap-4 mb-8">
                 <span className={`text-4xl font-display transition-colors duration-300 ${
-                  activeStep === index ? "text-[#eca8d6]" : "text-white/20"
+                  activeStep === index ? "text-[#ff4d6d]" : "text-white/20"
                 }`}>
                   {step.number}
                 </span>
                 <div className="flex-1 h-px bg-white/10 overflow-hidden">
                   {activeStep === index && (
-                    <div className="h-full bg-[#eca8d6]/50 animate-progress" />
+                    <div className="h-full bg-[#ff4d6d]/50 animate-progress" />
                   )}
                 </div>
               </div>
@@ -151,7 +151,7 @@ export function HowItWorksSection() {
               </p>
 
               {/* Active indicator */}
-              <div className={`absolute bottom-0 left-0 right-0 h-1 bg-[#eca8d6] transition-transform duration-500 origin-left ${
+              <div className={`absolute bottom-0 left-0 right-0 h-1 bg-[#ff4d6d] transition-transform duration-500 origin-left ${
                 activeStep === index ? "scale-x-100" : "scale-x-0"
               }`} />
             </button>

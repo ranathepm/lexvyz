@@ -164,7 +164,7 @@ export function PricingSection() {
                   <ul className="space-y-3 mb-10">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
-                        <Check className="w-4 h-4 text-[#eca8d6] mt-0.5 shrink-0" />
+                        <Check className="w-4 h-4 text-[#ff4d6d] mt-0.5 shrink-0" />
                         <span className="text-sm text-muted-foreground">{feature}</span>
                       </li>
                     ))}
@@ -193,15 +193,15 @@ export function PricingSection() {
         }`}>
           <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
             <span className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-[#eca8d6]" />
+              <Check className="w-4 h-4 text-[#ff4d6d]" />
               24/7 call answering
             </span>
             <span className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-[#eca8d6]" />
+              <Check className="w-4 h-4 text-[#ff4d6d]" />
               No long-term contracts
             </span>
             <span className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-[#eca8d6]" />
+              <Check className="w-4 h-4 text-[#ff4d6d]" />
               Cancel anytime
             </span>
           </div>

@@ -62,7 +62,7 @@ function BlurWord({ word, trigger }: { word: string; trigger: number }) {
   }, [trigger]);
 
   // gradient colours cycling across letter positions
-  const gradientColors = ["#eca8d6", "#a78bfa", "#67e8f9", "#fbbf24", "#eca8d6"];
+  const gradientColors = ["#ff4d6d", "#ff9ec2", "#ff4d6d"];
 
   return (
     <>
@@ -174,7 +174,7 @@ export function HeroSection() {
         >
           <span className="inline-flex items-center gap-3 text-sm font-mono text-white/60">
             <span className="w-8 h-px bg-white/30" />
-            AI automation &amp; digital marketing for law firms
+            Intelligent agents. Real results.
           </span>
         </div>
         
