@@ -1,0 +1,8 @@
+# Ignore node_modules, build output, and local env
+node_modules/
+.next/
+out/
+build/
+.env*
+*.log
+.DS_Store
