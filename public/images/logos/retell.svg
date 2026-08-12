@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Retell AI brand mark — ring of 8 dots, white (on-dark variant) -->
+  <circle cx="32" cy="10" r="5" fill="#ffffff"/>
+  <circle cx="32" cy="54" r="5" fill="#ffffff"/>
+  <circle cx="10" cy="32" r="5" fill="#ffffff"/>
+  <circle cx="54" cy="32" r="5" fill="#ffffff"/>
+  <circle cx="16.4" cy="16.4" r="5" fill="#ffffff"/>
+  <circle cx="47.6" cy="16.4" r="5" fill="#ffffff"/>
+  <circle cx="16.4" cy="47.6" r="5" fill="#ffffff"/>
+  <circle cx="47.6" cy="47.6" r="5" fill="#ffffff"/>
+</svg>
