@@ -5,7 +5,7 @@ import { useEffect, useState, useRef } from "react";
 const integrations = [
   // Voice AI — AI receptionist core
   { name: "VAPI", category: "Voice AI", logo: "/images/logos/vapi.png" },
-  { name: "Retell AI", category: "Voice AI", logo: "/images/logos/retell.png" },
+  { name: "Retell AI", category: "Voice AI", logo: "/images/logos/retell.svg" },
   { name: "Bland AI", category: "Voice AI", logo: "/images/logos/bland.png" },
   { name: "ElevenLabs", category: "Voice AI", logo: "/images/logos/elevenlabs.png" },
   { name: "PlayAI", category: "Voice AI", logo: "/images/logos/play.png" },
@@ -80,11 +80,11 @@ export function IntegrationsSection() {
       </div>
 
       {/* Full-width image */}
-      <div className={`relative left-1/2 -translate-x-1/2 w-screen -mt-16 transition-all duration-1000 delay-200 ${
+      <div className={`relative left-1/2 -translate-x-1/2 w-screen max-w-[100vw] overflow-x-clip -mt-16 transition-all duration-1000 delay-200 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}>
         <img
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/connection-KeJwWPQvn6l0a7C48tCARYtNEdC92H.png"
+          src="/images/connection.webp"
           alt=""
           aria-hidden="true"
           className="w-full h-auto object-cover"
@@ -138,16 +138,17 @@ export function IntegrationsSection() {
                 {integration.category}
               </span>
 
-              {/* Logo — official brand color, uniform size, centered */}
-              <div className="h-10 mb-4 flex items-center justify-center">
+              {/* Logo — official brand color, big, centered, no name below.
+                  Capped at 64px; small sources render at natural size so
+                  they never look blurry. */}
+              <div className="h-20 flex items-center justify-center">
                 <img
                   src={integration.logo}
                   alt={`${integration.name} logo`}
-                  className="w-8 h-8 object-contain"
+                  loading="lazy"
+                  className="max-w-16 max-h-16 w-auto h-auto object-contain"
                 />
               </div>
-
-              <span className="font-medium block">{integration.name}</span>
 
               {/* Animated underline */}
               <div className="absolute bottom-0 left-0 right-0 h-px bg-foreground/20 overflow-hidden">

@@ -55,7 +55,7 @@ export function AudioDemoPlayer() {
 
       {/* Label + waveform — flex-1 spreads across the longer bar */}
       <div className="min-w-0 flex-1">
-        <p className="text-white text-sm font-medium mb-1.5 whitespace-nowrap">
+        <p className="text-white text-sm font-medium mb-1.5 truncate">
           Real Time Call with AI
         </p>
         <div className="flex items-end justify-between gap-[3px] h-6">

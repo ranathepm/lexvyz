@@ -53,7 +53,7 @@ export function InfrastructureSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}>
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/world-3i68QNWJwmO7W19ztZWbevAwJQHzYL.png"
+                src="/images/world.webp"
                 alt="Target market sphere"
                 className="w-full h-full object-contain object-center"
               />

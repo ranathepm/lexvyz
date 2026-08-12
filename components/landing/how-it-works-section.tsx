@@ -107,9 +107,10 @@ export function HowItWorksSection() {
             isVisible ? "opacity-100" : "opacity-0"
           }`}>
             <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tree-uAia6REvB137CQyHFCf0za3O6h2zKO.png"
+              src="/images/tree.webp"
               alt=""
               aria-hidden="true"
+              loading="lazy"
               className="absolute bottom-0 left-0 w-full h-full object-contain object-bottom"
             />
             {/* Fade sur le bord gauche */}

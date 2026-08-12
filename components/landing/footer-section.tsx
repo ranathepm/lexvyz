@@ -98,7 +98,7 @@ export function FooterSection() {
       {/* Panoramic banner image */}
       <div className="relative w-full h-[340px] md:h-[420px] overflow-hidden">
         <img
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2810%29-UnDKstODkIENp5xqTYUEpt0Sm8tNOw.png"
+          src="/images/ups10.webp"
           alt="Bioluminescent landscape"
           className="w-full h-full object-cover object-center"
         />
@@ -154,7 +154,7 @@ export function FooterSection() {
                         className="text-sm text-white/40 hover:text-white transition-colors inline-flex items-center gap-2"
                       >
                         {link.name}
-                        {"badge" in link && link.badge && (
+                        {"badge" in link && typeof link.badge === "string" && link.badge && (
                           <span className="text-xs px-2 py-0.5 bg-white text-black rounded-full">
                             {link.badge}
                           </span>

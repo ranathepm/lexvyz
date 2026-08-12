@@ -8,25 +8,25 @@ const securityFeatures = [
     icon: Shield,
     title: "Client confidentiality",
     description: "Attorney-client privilege respected in every conversation.",
-    image: "/images/isolated.jpg",
+    image: "/images/isolated.webp",
   },
   {
     icon: Lock,
     title: "Encrypted data",
     description: "Case data encrypted at rest and in transit.",
-    image: "/images/encrypted.jpg",
+    image: "/images/encrypted.webp",
   },
   {
     icon: Eye,
     title: "Full call transcripts",
     description: "Every call and intake logged and inspectable.",
-    image: "/images/audit.jpg",
+    image: "/images/audit.webp",
   },
   {
     icon: FileCheck,
     title: "Ethical guardrails",
     description: "ABA-aligned handling of prospective client communications.",
-    image: "/images/permissions.jpg",
+    image: "/images/permissions.webp",
   },
 ];
 

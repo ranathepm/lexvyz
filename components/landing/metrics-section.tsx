@@ -271,7 +271,7 @@ export function MetricsSection() {
           isVisible ? "opacity-100" : "opacity-0"
         }`}>
           <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/real-time-graph-INFmn3u0MlUwvNPynoIhwxtPaPjxM5.png"
+            src="/images/realtime-graph.webp"
             alt=""
             aria-hidden="true"
             className="w-full h-auto object-cover"

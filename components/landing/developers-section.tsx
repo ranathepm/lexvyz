@@ -47,7 +47,7 @@ export function DevelopersSection() {
         }`}
       >
         <img
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2813%29-OQ2DiR3ElVsUg8kTvTL1kC5A3Q6maM.png"
+          src="/images/ups13.webp"
           alt=""
           aria-hidden="true"
           className="w-full h-full object-cover object-left-top"

@@ -129,10 +129,12 @@ export function HeroSection() {
           muted
           loop
           playsInline
+          preload="metadata"
+          poster="/images/tree.webp"
           aria-hidden="true"
           className="w-full h-full object-cover object-center opacity-80"
         >
-          <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bg-hero-0BnFGdr81Ifnj3WbBZoNt1KE4D5DMT.mp4" type="video/mp4" />
+          <source src="/video/bg-hero-720p.mp4" type="video/mp4" />
         </video>
         {/* Subtle overlay to ensure text readability on the left */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
@@ -186,11 +188,11 @@ export function HeroSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <span className="block whitespace-nowrap">
+            <span className="block md:whitespace-nowrap">
               Never miss a{" "}
               <span className="text-white">LEAD.</span>
             </span>
-            <span className="block whitespace-nowrap">
+            <span className="block md:whitespace-nowrap">
               Never lose a{" "}
               <span className="relative inline-block">
                 <BlurWord word={words[wordIndex]} trigger={wordIndex} />
