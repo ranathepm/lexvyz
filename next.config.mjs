@@ -2,8 +2,11 @@
 const nextConfig = {
   // Turbopack mis-infers the workspace root when a pnpm-workspace.yaml is
   // present; pin it to the project directory so `next` resolves correctly.
+  // process.cwd() is guaranteed to be the project dir (next dev/build run
+  // from the project root) — import.meta.dirname is unreliable inside
+  // Next's bundled config loader.
   turbopack: {
-    root: import.meta.dirname,
+    root: process.cwd(),
   },
   output: "standalone",
   async headers() {
