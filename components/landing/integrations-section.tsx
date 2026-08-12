@@ -5,7 +5,20 @@ import { useEffect, useState, useRef } from "react";
 const integrations = [
   { name: "GoHighLevel", category: "CRM", logo: "/images/logos/gohighlevel.png" },
   { name: "VAPI", category: "Voice", logo: "/images/logos/vapi.png" },
-  { name: "OpenAI", category: "LLM", logo: "/images/logos/openai.png" },
+  {
+    name: "LLMs",
+    category: "LLM",
+    logos: [
+      { name: "OpenAI", logo: "/images/logos/openai.png" },
+      { name: "Anthropic", logo: "/images/logos/anthropic.png" },
+      { name: "Gemini", logo: "/images/logos/gemini.png" },
+      { name: "Llama", logo: "/images/logos/llama.png" },
+      { name: "Mistral", logo: "/images/logos/mistral.png" },
+      { name: "Grok", logo: "/images/logos/grok.png" },
+      { name: "DeepSeek", logo: "/images/logos/deepseek.png" },
+      { name: "Claude", logo: "/images/logos/claude.png" },
+    ],
+  },
   { name: "ElevenLabs", category: "Voice", logo: "/images/logos/elevenlabs.png" },
   { name: "Twilio", category: "SMS", logo: "/images/logos/twilio.png" },
   { name: "Calendly", category: "Calendar", logo: "/images/logos/calendly.png" },
@@ -122,15 +135,27 @@ export function IntegrationsSection() {
                 {integration.category}
               </span>
 
-              {/* Logo */}
-              <div className={`w-10 h-10 mb-6 flex items-center justify-center transition-opacity ${
-                hoveredIndex === index ? "opacity-100" : "opacity-70"
-              }`}>
-                <img
-                  src={integration.logo}
-                  alt={`${integration.name} logo`}
-                  className="w-9 h-9 object-contain"
-                />
+              {/* Logo — white monochrome, uniform size, centered */}
+              <div className="h-16 mb-6 flex items-center justify-center">
+                {integration.logos ? (
+                  <div className="grid grid-cols-4 gap-x-3 gap-y-3 w-full max-w-[220px]">
+                    {integration.logos.map((llm) => (
+                      <div key={llm.name} className="flex items-center justify-center" title={llm.name}>
+                        <img
+                          src={llm.logo}
+                          alt={`${llm.name} logo`}
+                          className="w-8 h-8 object-contain brightness-0 invert"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <img
+                    src={integration.logo}
+                    alt={`${integration.name} logo`}
+                    className="w-10 h-10 object-contain brightness-0 invert"
+                  />
+                )}
               </div>
 
               <span className="font-medium block">{integration.name}</span>

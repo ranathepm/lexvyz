@@ -40,11 +40,11 @@ export function AudioDemoPlayer() {
     <div className="inline-flex items-center gap-5 border border-white/15 bg-white/[0.04] backdrop-blur-md rounded-3xl px-5 py-4 max-w-full sway-soft">
       <audio ref={audioRef} src={AUDIO_SRC} preload="none" />
 
-      {/* Play / Pause button — solid soft pink, no gradient */}
+      {/* Play / Pause button — white */}
       <button
         onClick={togglePlay}
         aria-label={isPlaying ? "Pause demo call" : "Play demo call"}
-        className="shrink-0 w-12 h-12 rounded-full bg-[#eca8d6] hover:bg-[#eca8d6]/85 text-white flex items-center justify-center transition-colors"
+        className="shrink-0 w-12 h-12 rounded-full bg-white hover:bg-white/85 text-black flex items-center justify-center transition-colors"
       >
         {isPlaying ? (
           <Pause className="w-5 h-5" />

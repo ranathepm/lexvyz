@@ -222,20 +222,43 @@
     100% { opacity: 1; filter: blur(0); }
   }
 
-  /* Gentle leaf-like sway for the audio bar (like the hero tree leaves) */
+  /* Soft pastel version of the hero gradient — light & airy, for badges */
+  .gradient-bg-soft {
+    background: linear-gradient(
+      90deg,
+      rgba(236, 168, 214, 0.35) 0%,
+      rgba(167, 139, 250, 0.35) 25%,
+      rgba(103, 232, 249, 0.35) 50%,
+      rgba(251, 191, 36, 0.35) 75%,
+      rgba(236, 168, 214, 0.35) 100%
+    );
+  }
+
+  /* Gentle leaf-like sway for the audio bar — left-to-right drift,
+     NOT a tilt/rotation (like a leaf drifting in the wind) */
   .sway-soft {
-    transform-origin: 50% 100%;
-    animation: sway-soft 4.5s ease-in-out infinite;
+    animation: sway-soft 5s ease-in-out infinite;
   }
 
   @keyframes sway-soft {
-    0%, 100% { transform: rotate(-1.2deg); }
-    50%      { transform: rotate(1.2deg); }
+    0%, 100% { transform: translateX(-8px); }
+    50%      { transform: translateX(8px); }
   }
 
   @keyframes gradient-shift {
     0%   { background-position: 0% 50%; }
     50%  { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+  }
+
+  /* Slot-machine roll-up: word rolls in from below, old one rolls out above */
+  .roll-up {
+    animation: roll-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  @keyframes roll-up {
+    0%   { transform: rotateX(-90deg); opacity: 0; }
+    60%  { opacity: 1; }
+    100% { transform: rotateX(0deg); opacity: 1; }
   }
 }

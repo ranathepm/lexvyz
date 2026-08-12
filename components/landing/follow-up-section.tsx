@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import { GradientText } from "./gradient-text";
 
 // Follow-up sequence automation — the money is in the follow-up.
 // ChatGPT-sourced stats on response time & follow-up impact.
@@ -73,7 +74,7 @@ export function FollowUpSection() {
           }`}>
             The money is in
             <br />
-            <span className="text-[#eca8d6]">the follow-up.</span>
+            <GradientText text="the follow-up." />
           </h2>
           <p className={`mt-6 text-xl text-muted-foreground leading-relaxed max-w-2xl transition-all duration-1000 delay-100 ${
             isVisible ? "opacity-100" : "opacity-0"
@@ -92,7 +93,7 @@ export function FollowUpSection() {
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <span className="text-4xl lg:text-5xl font-display text-[#eca8d6] block mb-3">
+              <span className="text-4xl lg:text-5xl font-display text-white block mb-3">
                 {stat.value}
               </span>
               <span className="text-sm text-muted-foreground leading-relaxed">
@@ -104,49 +105,55 @@ export function FollowUpSection() {
 
         {/* Flowchart: won vs lost lead */}
         <div className="grid lg:grid-cols-2 gap-6">
-          {/* Won timeline */}
-          <div className={`border border-[#22c55e]/30 bg-[#22c55e]/[0.04] p-8 lg:p-10 transition-all duration-700 ${
+          {/* Won timeline — gradient treatment (same palette as hero word) */}
+          <div className={`relative border border-white/15 bg-white/[0.03] p-8 lg:p-10 transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}>
-            <div className="flex items-center gap-3 mb-8">
-              <span className="w-3 h-3 rounded-full bg-[#22c55e] animate-pulse" />
-              <h3 className="text-2xl lg:text-3xl font-display text-[#22c55e]">
-                Lead captured — revenue won
-              </h3>
-            </div>
-            <div className="space-y-0">
-              {wonTimeline.map((step, i) => (
-                <div key={step.t} className="flex gap-4">
-                  <div className="flex flex-col items-center">
-                    <span className="shrink-0 w-10 h-10 rounded-full border border-[#22c55e]/50 bg-[#22c55e]/10 flex items-center justify-center text-sm font-mono text-[#22c55e]">
-                      {step.t}
-                    </span>
-                    {i < wonTimeline.length - 1 && (
-                      <span className="w-px flex-1 bg-[#22c55e]/30 my-1" />
-                    )}
+            {/* soft gradient wash behind the won box */}
+            <div className="absolute inset-0 gradient-bg-soft pointer-events-none" aria-hidden="true" />
+            <div className="relative">
+              <div className="flex items-center gap-3 mb-8">
+                <span className="w-3 h-3 rounded-full gradient-bg animate-pulse" />
+                <h3 className="text-2xl lg:text-3xl font-display">
+                  <GradientText text="Lead captured — revenue won" />
+                </h3>
+              </div>
+              <div className="space-y-0">
+                {wonTimeline.map((step, i) => (
+                  <div key={step.t} className="flex gap-4">
+                    <div className="flex flex-col items-center">
+                      <span className="shrink-0 w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-sm font-mono text-white">
+                        {step.t}
+                      </span>
+                      {i < wonTimeline.length - 1 && (
+                        <span className="w-px flex-1 bg-white/25 my-1" />
+                      )}
+                    </div>
+                    <div className="pb-8">
+                      <p className="text-white font-medium">{step.label}</p>
+                      <p className="text-sm text-muted-foreground">{step.note}</p>
+                    </div>
                   </div>
-                  <div className="pb-8">
-                    <p className="text-white font-medium">{step.label}</p>
-                    <p className="text-sm text-muted-foreground">{step.note}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="mt-4 pt-6 border-t border-[#22c55e]/20 flex items-baseline gap-3">
-              <span className="text-4xl lg:text-5xl font-display text-[#22c55e]">+$</span>
-              <span className="text-muted-foreground text-sm">
-                Case value captured — booked, confirmed, and on the calendar within 5 minutes.
-              </span>
+                ))}
+              </div>
+              <div className="mt-4 pt-6 border-t border-white/15 flex items-baseline gap-3">
+                <span className="text-4xl lg:text-5xl font-display">
+                  <GradientText text="+$" />
+                </span>
+                <span className="text-muted-foreground text-sm">
+                  Case value captured — booked, confirmed, and on the calendar within 5 minutes.
+                </span>
+              </div>
             </div>
           </div>
 
-          {/* Lost timeline */}
-          <div className={`border border-[#ef4444]/30 bg-[#ef4444]/[0.04] p-8 lg:p-10 transition-all duration-700 delay-150 ${
+          {/* Lost timeline — white */}
+          <div className={`border border-white/30 bg-white/[0.06] p-8 lg:p-10 transition-all duration-700 delay-150 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}>
             <div className="flex items-center gap-3 mb-8">
-              <span className="w-3 h-3 rounded-full bg-[#ef4444]" />
-              <h3 className="text-2xl lg:text-3xl font-display text-[#ef4444]">
+              <span className="w-3 h-3 rounded-full bg-white" />
+              <h3 className="text-2xl lg:text-3xl font-display text-white">
                 Lead missed — revenue lost
               </h3>
             </div>
@@ -154,23 +161,23 @@ export function FollowUpSection() {
               {lostTimeline.map((step, i) => (
                 <div key={step.t} className="flex gap-4">
                   <div className="flex flex-col items-center">
-                    <span className="shrink-0 w-10 h-10 rounded-full border border-[#ef4444]/50 bg-[#ef4444]/10 flex items-center justify-center text-sm font-mono text-[#ef4444]">
+                    <span className="shrink-0 w-10 h-10 rounded-full border border-white/50 bg-white/10 flex items-center justify-center text-sm font-mono text-white">
                       {step.t}
                     </span>
                     {i < lostTimeline.length - 1 && (
-                      <span className="w-px flex-1 bg-[#ef4444]/30 my-1" />
+                      <span className="w-px flex-1 bg-white/30 my-1" />
                     )}
                   </div>
                   <div className="pb-8">
                     <p className="text-white font-medium">{step.label}</p>
-                    <p className="text-sm text-muted-foreground">{step.note}</p>
+                    <p className="text-sm text-white/60">{step.note}</p>
                   </div>
                 </div>
               ))}
             </div>
-            <div className="mt-4 pt-6 border-t border-[#ef4444]/20 flex items-baseline gap-3">
-              <span className="text-4xl lg:text-5xl font-display text-[#ef4444]">$0</span>
-              <span className="text-muted-foreground text-sm">
+            <div className="mt-4 pt-6 border-t border-white/20 flex items-baseline gap-3">
+              <span className="text-4xl lg:text-5xl font-display text-white">$0</span>
+              <span className="text-white/60 text-sm">
                 No follow-up, no second chance. The firm that responds first takes the case.
               </span>
             </div>

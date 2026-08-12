@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { RollingHeading } from "./rolling-heading";
 
 const features = [
   {
@@ -171,9 +172,7 @@ export function FeaturesSection() {
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
-                More Calls.
-                <br />
-                <span className="text-muted-foreground">More Cases. More Money.</span>
+                <RollingHeading />
               </h2>
             </div>
             <div className="lg:col-span-5 lg:pb-4">
