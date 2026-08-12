@@ -198,19 +198,28 @@
     animation: gradient-shift 1.5s ease infinite;
   }
 
-  /* Same animated multicolor gradient, but as a solid background
-     (used for the audio play button + FREE badge) */
+  /* Mirrors the hero H1's rotating last word (BlurWord) exactly:
+     - static position-based color sweep across the same 5 colors
+     - revealed with the same blur+opacity animation (500ms, cubic ease-out)
+     No sliding/moving gradient — that is not what the hero word does. */
   .gradient-bg {
     background: linear-gradient(
-      45deg,
+      90deg,
       #eca8d6 0%,
       #a78bfa 25%,
       #67e8f9 50%,
       #fbbf24 75%,
       #eca8d6 100%
     );
-    background-size: 300% 300%;
-    animation: gradient-shift 1.5s ease infinite;
+  }
+
+  .blur-reveal {
+    animation: blur-reveal 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  }
+
+  @keyframes blur-reveal {
+    0%   { opacity: 0; filter: blur(20px); }
+    100% { opacity: 1; filter: blur(0); }
   }
 
   @keyframes gradient-shift {
