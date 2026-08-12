@@ -103,81 +103,81 @@ export function FollowUpSection() {
           ))}
         </div>
 
-        {/* Flowchart: won vs lost lead */}
+        {/* Flowchart: won vs lost lead — same card style as the 01/02/03 boxes */}
         <div className="grid lg:grid-cols-2 gap-6">
-          {/* Won timeline — gradient treatment (same palette as hero word) */}
-          <div className={`relative border border-white/15 bg-white/[0.03] p-8 lg:p-10 transition-all duration-700 ${
+          {/* Won timeline — black card with animated pink underline (like step cards) */}
+          <div className={`relative bg-[#000000] border border-white/25 p-8 lg:p-10 transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}>
-            {/* soft gradient wash behind the won box */}
-            <div className="absolute inset-0 gradient-bg-soft pointer-events-none" aria-hidden="true" />
-            <div className="relative">
-              <div className="flex items-center gap-3 mb-8">
-                <span className="w-3 h-3 rounded-full gradient-bg animate-pulse" />
-                <h3 className="text-2xl lg:text-3xl font-display">
-                  <GradientText text="Lead captured — revenue won" />
-                </h3>
-              </div>
-              <div className="space-y-0">
-                {wonTimeline.map((step, i) => (
-                  <div key={step.t} className="flex gap-4">
-                    <div className="flex flex-col items-center">
-                      <span className="shrink-0 w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-sm font-mono text-white">
-                        {step.t}
-                      </span>
-                      {i < wonTimeline.length - 1 && (
-                        <span className="w-px flex-1 bg-white/25 my-1" />
-                      )}
-                    </div>
-                    <div className="pb-8">
-                      <p className="text-white font-medium">{step.label}</p>
-                      <p className="text-sm text-muted-foreground">{step.note}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-4 pt-6 border-t border-white/15 flex items-baseline gap-3">
-                <span className="text-4xl lg:text-5xl font-display">
-                  <GradientText text="+$" />
-                </span>
-                <span className="text-muted-foreground text-sm">
-                  Case value captured — booked, confirmed, and on the calendar within 5 minutes.
-                </span>
+            <div className="flex items-center gap-4 mb-8">
+              <span className="text-2xl font-display text-[#eca8d6]">01</span>
+              <div className="flex-1 h-px bg-white/10 overflow-hidden">
+                <div className="h-full bg-[#eca8d6]/50 animate-progress" />
               </div>
             </div>
-          </div>
-
-          {/* Lost timeline — white */}
-          <div className={`border border-white/30 bg-white/[0.06] p-8 lg:p-10 transition-all duration-700 delay-150 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}>
-            <div className="flex items-center gap-3 mb-8">
-              <span className="w-3 h-3 rounded-full bg-white" />
-              <h3 className="text-2xl lg:text-3xl font-display text-white">
-                Lead missed — revenue lost
-              </h3>
-            </div>
+            <h3 className="text-2xl lg:text-3xl font-display text-white mb-8">
+              Lead captured — revenue won
+            </h3>
             <div className="space-y-0">
-              {lostTimeline.map((step, i) => (
+              {wonTimeline.map((step, i) => (
                 <div key={step.t} className="flex gap-4">
                   <div className="flex flex-col items-center">
-                    <span className="shrink-0 w-10 h-10 rounded-full border border-white/50 bg-white/10 flex items-center justify-center text-sm font-mono text-white">
+                    <span className="shrink-0 w-10 h-10 rounded-full border border-white/30 bg-white/5 flex items-center justify-center text-sm font-mono text-white">
                       {step.t}
                     </span>
-                    {i < lostTimeline.length - 1 && (
-                      <span className="w-px flex-1 bg-white/30 my-1" />
+                    {i < wonTimeline.length - 1 && (
+                      <span className="w-px flex-1 bg-white/15 my-1" />
                     )}
                   </div>
                   <div className="pb-8">
                     <p className="text-white font-medium">{step.label}</p>
-                    <p className="text-sm text-white/60">{step.note}</p>
+                    <p className="text-sm text-white/50">{step.note}</p>
                   </div>
                 </div>
               ))}
             </div>
-            <div className="mt-4 pt-6 border-t border-white/20 flex items-baseline gap-3">
+            <div className="mt-4 pt-6 border-t border-white/15 flex items-baseline gap-3">
+              <span className="text-4xl lg:text-5xl font-display text-white">+$</span>
+              <span className="text-white/50 text-sm">
+                Case value captured — booked, confirmed, and on the calendar within 5 minutes.
+              </span>
+            </div>
+            {/* Animated pink underline, same as the 01/02/03 cards */}
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#eca8d6]" />
+          </div>
+
+          {/* Lost timeline — same card style */}
+          <div className={`relative bg-[#000000] border border-white/25 p-8 lg:p-10 transition-all duration-700 delay-150 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}>
+            <div className="flex items-center gap-4 mb-8">
+              <span className="text-2xl font-display text-white/40">02</span>
+              <div className="flex-1 h-px bg-white/10" />
+            </div>
+            <h3 className="text-2xl lg:text-3xl font-display text-white mb-8">
+              Lead missed — revenue lost
+            </h3>
+            <div className="space-y-0">
+              {lostTimeline.map((step, i) => (
+                <div key={step.t} className="flex gap-4">
+                  <div className="flex flex-col items-center">
+                    <span className="shrink-0 w-10 h-10 rounded-full border border-white/30 bg-white/5 flex items-center justify-center text-sm font-mono text-white">
+                      {step.t}
+                    </span>
+                    {i < lostTimeline.length - 1 && (
+                      <span className="w-px flex-1 bg-white/15 my-1" />
+                    )}
+                  </div>
+                  <div className="pb-8">
+                    <p className="text-white font-medium">{step.label}</p>
+                    <p className="text-sm text-white/50">{step.note}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-4 pt-6 border-t border-white/15 flex items-baseline gap-3">
               <span className="text-4xl lg:text-5xl font-display text-white">$0</span>
-              <span className="text-white/60 text-sm">
+              <span className="text-white/50 text-sm">
                 No follow-up, no second chance. The firm that responds first takes the case.
               </span>
             </div>

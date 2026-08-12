@@ -37,7 +37,7 @@ export function AudioDemoPlayer() {
   };
 
   return (
-    <div className="inline-flex items-center gap-5 border border-white/15 bg-white/[0.04] backdrop-blur-md rounded-3xl px-5 py-4 max-w-full sway-soft">
+    <div className="inline-flex items-center gap-5 border border-white/15 bg-white/[0.04] backdrop-blur-md rounded-3xl px-5 py-4 w-full max-w-[780px] sway-soft">
       <audio ref={audioRef} src={AUDIO_SRC} preload="none" />
 
       {/* Play / Pause button — white */}
@@ -53,12 +53,12 @@ export function AudioDemoPlayer() {
         )}
       </button>
 
-      {/* Label + waveform */}
-      <div className="min-w-0">
+      {/* Label + waveform — flex-1 spreads across the longer bar */}
+      <div className="min-w-0 flex-1">
         <p className="text-white text-sm font-medium mb-1.5 whitespace-nowrap">
           Real Time Call with AI
         </p>
-        <div className="flex items-end gap-[3px] h-6" aria-hidden="true">
+        <div className="flex items-end justify-between gap-[3px] h-6">
           {WAVE_BARS.map((h, i) => (
             <span
               key={i}

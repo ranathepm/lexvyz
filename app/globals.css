@@ -251,14 +251,23 @@
     100% { background-position: 0% 50%; }
   }
 
-  /* Slot-machine roll-up: word rolls in from below, old one rolls out above */
-  .roll-up {
-    animation: roll-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  /* Slot-machine roll: current word flips up and out the top,
+     next word rises up from below the box */
+  .roll-up-out {
+    animation: roll-up-out 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
-  @keyframes roll-up {
-    0%   { transform: rotateX(-90deg); opacity: 0; }
-    60%  { opacity: 1; }
-    100% { transform: rotateX(0deg); opacity: 1; }
+  @keyframes roll-up-out {
+    0%   { transform: translateY(0) rotateX(0deg); opacity: 1; }
+    100% { transform: translateY(-100%) rotateX(45deg); opacity: 0; }
+  }
+
+  .roll-up-in {
+    animation: roll-up-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  @keyframes roll-up-in {
+    0%   { transform: translateY(100%) rotateX(-45deg); opacity: 0; }
+    100% { transform: translateY(0) rotateX(0deg); opacity: 1; }
   }
 }

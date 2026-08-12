@@ -3,31 +3,34 @@
 import { useEffect, useState, useRef } from "react";
 
 const integrations = [
+  // Voice AI — AI receptionist core
+  { name: "VAPI", category: "Voice AI", logo: "/images/logos/vapi.png" },
+  { name: "Retell AI", category: "Voice AI", logo: "/images/logos/retell.png" },
+  { name: "Bland AI", category: "Voice AI", logo: "/images/logos/bland.png" },
+  { name: "ElevenLabs", category: "Voice AI", logo: "/images/logos/elevenlabs.png" },
+  { name: "PlayAI", category: "Voice AI", logo: "/images/logos/play.png" },
+  { name: "Synthflow", category: "Voice AI", logo: "/images/logos/synthflow.png" },
+  // LLMs
+  { name: "OpenAI", category: "LLM", logo: "/images/logos/openai.png" },
+  { name: "Anthropic", category: "LLM", logo: "/images/logos/anthropic.png" },
+  { name: "Gemini", category: "LLM", logo: "/images/logos/gemini.png" },
+  { name: "Llama", category: "LLM", logo: "/images/logos/llama.png" },
+  { name: "Mistral", category: "LLM", logo: "/images/logos/mistral.png" },
+  { name: "Grok", category: "LLM", logo: "/images/logos/grok.png" },
+  // Automation & CRM
   { name: "GoHighLevel", category: "CRM", logo: "/images/logos/gohighlevel.png" },
-  { name: "VAPI", category: "Voice", logo: "/images/logos/vapi.png" },
-  {
-    name: "LLMs",
-    category: "LLM",
-    logos: [
-      { name: "OpenAI", logo: "/images/logos/openai.png" },
-      { name: "Anthropic", logo: "/images/logos/anthropic.png" },
-      { name: "Gemini", logo: "/images/logos/gemini.png" },
-      { name: "Llama", logo: "/images/logos/llama.png" },
-      { name: "Mistral", logo: "/images/logos/mistral.png" },
-      { name: "Grok", logo: "/images/logos/grok.png" },
-      { name: "DeepSeek", logo: "/images/logos/deepseek.png" },
-      { name: "Claude", logo: "/images/logos/claude.png" },
-    ],
-  },
-  { name: "ElevenLabs", category: "Voice", logo: "/images/logos/elevenlabs.png" },
+  { name: "HubSpot", category: "CRM", logo: "/images/logos/hubspot.png" },
+  { name: "Zapier", category: "Automation", logo: "/images/logos/zapier.png" },
+  { name: "Make", category: "Automation", logo: "/images/logos/make.png" },
+  { name: "n8n", category: "Automation", logo: "/images/logos/n8n.png" },
+  { name: "Voiceflow", category: "Chatbot", logo: "/images/logos/voiceflow.png" },
+  { name: "Botpress", category: "Chatbot", logo: "/images/logos/botpress.png" },
+  // Comms & scheduling
   { name: "Twilio", category: "SMS", logo: "/images/logos/twilio.png" },
   { name: "Calendly", category: "Calendar", logo: "/images/logos/calendly.png" },
-  { name: "Zapier", category: "Auto", logo: "/images/logos/zapier.png" },
+  { name: "Airtable", category: "Database", logo: "/images/logos/airtable.png" },
+  { name: "Slack", category: "Comms", logo: "/images/logos/slack.png" },
   { name: "Google", category: "SEO", logo: "/images/logos/google.png" },
-  { name: "Clio", category: "Legal", logo: "/images/logos/clio.png" },
-  { name: "MyCase", category: "Legal", logo: "/images/logos/mycase.png" },
-  { name: "LawPay", category: "Payments", logo: "/images/logos/lawpay.png" },
-  { name: "Avvo", category: "Directories", logo: "/images/logos/avvo.png" },
 ];
 
 export function IntegrationsSection() {
@@ -90,11 +93,11 @@ export function IntegrationsSection() {
 
       {/* Integration grid — remonte sur l'image avec spacing mobile approprié */}
       <div className="relative z-10 mt-0 lg:-mt-24 max-w-[1400px] mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-16">
+        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-16">
           {integrations.map((integration, index) => (
             <div
               key={integration.name}
-              className={`group relative overflow-hidden p-6 lg:p-8 border transition-all duration-500 cursor-default ${
+              className={`group relative overflow-hidden p-4 lg:p-5 border transition-all duration-500 cursor-default ${
                 hoveredIndex === index
                   ? "border-foreground bg-foreground/[0.04] scale-[1.02]"
                   : "border-foreground/10 hover:border-foreground/30"
@@ -135,27 +138,13 @@ export function IntegrationsSection() {
                 {integration.category}
               </span>
 
-              {/* Logo — white monochrome, uniform size, centered */}
-              <div className="h-16 mb-6 flex items-center justify-center">
-                {integration.logos ? (
-                  <div className="grid grid-cols-4 gap-x-3 gap-y-3 w-full max-w-[220px]">
-                    {integration.logos.map((llm) => (
-                      <div key={llm.name} className="flex items-center justify-center" title={llm.name}>
-                        <img
-                          src={llm.logo}
-                          alt={`${llm.name} logo`}
-                          className="w-8 h-8 object-contain brightness-0 invert"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <img
-                    src={integration.logo}
-                    alt={`${integration.name} logo`}
-                    className="w-10 h-10 object-contain brightness-0 invert"
-                  />
-                )}
+              {/* Logo — official brand color, uniform size, centered */}
+              <div className="h-10 mb-4 flex items-center justify-center">
+                <img
+                  src={integration.logo}
+                  alt={`${integration.name} logo`}
+                  className="w-8 h-8 object-contain"
+                />
               </div>
 
               <span className="font-medium block">{integration.name}</span>
@@ -176,7 +165,7 @@ export function IntegrationsSection() {
         }`}>
           <div className="flex flex-wrap gap-12">
             {[
-              { value: "12+", label: "Integrations" },
+              { value: "24+", label: "Integrations" },
               { value: "OAuth", label: "Secure by default" },
               { value: "24/7", label: "Always on" },
             ].map((stat) => (
