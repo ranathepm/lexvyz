@@ -4,40 +4,39 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* LEXVYZ Official Brand Palette */
-  --background: #0a0a0a;              /* Deep Black */
-  --foreground: #f4f4f5;              /* near-white */
-  --card: #141416;                    /* slightly lifted deep black */
-  --card-foreground: #f4f4f5;
-  --popover: #141416;
-  --popover-foreground: #f4f4f5;
-  --primary: #ff4d6d;                 /* Rose Glow */
-  --primary-foreground: #0a0a0a;
-  --secondary: #1c1c1f;
-  --secondary-foreground: #f4f4f5;
-  --muted: #1c1c1f;
-  --muted-foreground: #a1a1aa;        /* Steel Gray */
-  --accent: #ff9ec2;                  /* Luminous Pink */
-  --accent-foreground: #0a0a0a;
-  --destructive: #ef4444;
-  --destructive-foreground: #f4f4f5;
-  --border: #27272a;
-  --input: #1c1c1f;
-  --ring: #ff4d6d;
-  --chart-1: #ff4d6d;
-  --chart-2: #ff9ec2;
-  --chart-3: #a1a1aa;
-  --chart-4: #6d6d76;
-  --chart-5: #3f3f46;
+  --background: oklch(0.06 0.008 260);
+  --foreground: oklch(0.94 0.005 90);
+  --card: oklch(0.09 0.008 260);
+  --card-foreground: oklch(0.94 0.005 90);
+  --popover: oklch(0.09 0.008 260);
+  --popover-foreground: oklch(0.94 0.005 90);
+  --primary: oklch(0.94 0.005 90);
+  --primary-foreground: oklch(0.06 0.008 260);
+  --secondary: oklch(0.12 0.008 260);
+  --secondary-foreground: oklch(0.94 0.005 90);
+  --muted: oklch(0.12 0.008 260);
+  --muted-foreground: oklch(0.55 0.015 90);
+  --accent: oklch(0.14 0.01 260);
+  --accent-foreground: oklch(0.94 0.005 90);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.94 0.005 90);
+  --border: oklch(0.18 0.008 260);
+  --input: oklch(0.14 0.008 260);
+  --ring: oklch(0.94 0.005 90);
+  --chart-1: oklch(0.94 0.005 90);
+  --chart-2: oklch(0.72 0.01 90);
+  --chart-3: oklch(0.52 0.015 90);
+  --chart-4: oklch(0.35 0.01 90);
+  --chart-5: oklch(0.20 0.008 90);
   --radius: 0.25rem;
-  --sidebar: #0a0a0a;
-  --sidebar-foreground: #f4f4f5;
-  --sidebar-primary: #ff4d6d;
-  --sidebar-primary-foreground: #0a0a0a;
-  --sidebar-accent: #1c1c1f;
-  --sidebar-accent-foreground: #f4f4f5;
-  --sidebar-border: #27272a;
-  --sidebar-ring: #ff4d6d;
+  --sidebar: oklch(0.06 0.008 260);
+  --sidebar-foreground: oklch(0.94 0.005 90);
+  --sidebar-primary: oklch(0.94 0.005 90);
+  --sidebar-primary-foreground: oklch(0.06 0.008 260);
+  --sidebar-accent: oklch(0.12 0.008 260);
+  --sidebar-accent-foreground: oklch(0.94 0.005 90);
+  --sidebar-border: oklch(0.18 0.008 260);
+  --sidebar-ring: oklch(0.55 0.015 90);
 }
 
 @theme inline {
@@ -180,15 +179,17 @@
   }
   
   .how-it-works-bg {
-    background-color: #141416;
+    background-color: oklch(0.10 0.008 260);
   }
 
   .word-gradient {
     background: linear-gradient(
       45deg,
-      #ff4d6d 0%,
-      #ff9ec2 40%,
-      #ff4d6d 100%
+      #eca8d6 0%,
+      #a78bfa 25%,
+      #67e8f9 50%,
+      #fbbf24 75%,
+      #eca8d6 100%
     );
     background-size: 300% 300%;
     background-clip: text;

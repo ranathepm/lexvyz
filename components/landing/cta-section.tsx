@@ -64,7 +64,7 @@ export function CtaSection() {
                 <div className="flex flex-col sm:flex-row items-start gap-4">
                   <Button
                     size="lg"
-                    className="bg-[#ff4d6d] hover:bg-[#ff4d6d]/90 text-white px-8 h-14 text-base rounded-full group font-semibold shadow-[0_0_30px_rgba(255,77,109,0.5)] animate-pulse-soft"
+                    className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group font-semibold"
                   >
                     Book a Demo
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />

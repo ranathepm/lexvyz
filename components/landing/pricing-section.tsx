@@ -129,7 +129,7 @@ export function PricingSection() {
                 {/* Popular badge */}
                 {plan.highlight && (
                   <div className="absolute -top-4 left-8 right-8 flex justify-center">
-                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#ff4d6d] text-white text-xs font-mono uppercase tracking-widest rounded-full shadow-[0_0_20px_rgba(255,77,109,0.5)]">
+                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-foreground text-background text-xs font-mono uppercase tracking-widest">
                       <Zap className="w-3 h-3" />
                       {plan.badge ?? "Most Popular"}
                     </span>
@@ -169,7 +169,7 @@ export function PricingSection() {
                   <ul className="space-y-3 mb-6">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
-                        <Check className="w-4 h-4 text-[#ff4d6d] mt-0.5 shrink-0" />
+                        <Check className="w-4 h-4 text-[#eca8d6] mt-0.5 shrink-0" />
                         <span className="text-sm text-muted-foreground">{feature}</span>
                       </li>
                     ))}
@@ -177,9 +177,9 @@ export function PricingSection() {
 
                   {/* Hypothetical ROI line */}
                   {plan.roi && (
-                    <div className="mb-8 p-4 border border-[#ff4d6d]/25 bg-[#ff4d6d]/[0.05]">
+                    <div className="mb-8 p-4 border border-[#eca8d6]/25 bg-[#eca8d6]/[0.05]">
                       <p className="text-xs text-muted-foreground leading-relaxed">
-                        <span className="text-[#ff4d6d] font-mono uppercase tracking-wider text-[10px] block mb-1">
+                        <span className="text-[#eca8d6] font-mono uppercase tracking-wider text-[10px] block mb-1">
                           Hypothetical ROI
                         </span>
                         {plan.roi}
@@ -210,15 +210,15 @@ export function PricingSection() {
         }`}>
           <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
             <span className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-[#ff4d6d]" />
+              <Check className="w-4 h-4 text-[#eca8d6]" />
               24/7 call answering
             </span>
             <span className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-[#ff4d6d]" />
+              <Check className="w-4 h-4 text-[#eca8d6]" />
               No long-term contracts
             </span>
             <span className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-[#ff4d6d]" />
+              <Check className="w-4 h-4 text-[#eca8d6]" />
               Cancel anytime
             </span>
           </div>

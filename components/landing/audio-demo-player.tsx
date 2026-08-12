@@ -44,7 +44,7 @@ export function AudioDemoPlayer() {
       <button
         onClick={togglePlay}
         aria-label={isPlaying ? "Pause demo call" : "Play demo call"}
-        className="shrink-0 w-12 h-12 rounded-full bg-[#ff4d6d] hover:bg-[#ff4d6d]/85 text-white flex items-center justify-center transition-colors"
+        className="shrink-0 w-12 h-12 rounded-full bg-[#eca8d6] hover:bg-[#eca8d6]/85 text-white flex items-center justify-center transition-colors"
       >
         {isPlaying ? (
           <Pause className="w-5 h-5" />
@@ -63,7 +63,7 @@ export function AudioDemoPlayer() {
             <span
               key={i}
               className={`w-[3px] rounded-full transition-all duration-300 ${
-                isPlaying ? "bg-[#ff4d6d]" : "bg-white/30"
+                isPlaying ? "bg-[#eca8d6]" : "bg-white/30"
               }`}
               style={{
                 height: `${h}px`,

@@ -63,7 +63,7 @@ function BlurWord({ word, trigger }: { word: string; trigger: number }) {
   }, [trigger]);
 
   // gradient colours cycling across letter positions
-  const gradientColors = ["#ff4d6d", "#ff9ec2", "#ff4d6d"];
+  const gradientColors = ["#eca8d6", "#a78bfa", "#67e8f9", "#fbbf24", "#eca8d6"];
 
   return (
     <>
@@ -188,7 +188,7 @@ export function HeroSection() {
           >
             <span className="block whitespace-nowrap">
               Never miss a{" "}
-              <span className="text-[#ff4d6d]">LEAD.</span>
+              <span className="text-[#eca8d6]">LEAD.</span>
             </span>
             <span className="block whitespace-nowrap">
               Never lose a{" "}
@@ -216,7 +216,7 @@ export function HeroSection() {
         >
           <a
             href="#pricing"
-            className="inline-flex items-center justify-center gap-2 bg-[#ff4d6d] hover:bg-[#ff4d6d]/90 text-white font-semibold text-lg px-10 h-16 rounded-full shadow-[0_0_30px_rgba(255,77,109,0.5)] hover:shadow-[0_0_50px_rgba(255,77,109,0.75)] transition-all animate-pulse-soft"
+            className="inline-flex items-center justify-center gap-2 bg-white hover:bg-white/90 text-black font-semibold text-lg px-10 h-16 rounded-full transition-all"
           >
             Book a Demo
           </a>

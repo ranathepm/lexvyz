@@ -78,10 +78,10 @@ export function Navigation() {
             </a>
             <Button
               size="lg"
-              className={`rounded-full font-semibold transition-all duration-500 shadow-[0_0_24px_rgba(255,77,109,0.45)] hover:shadow-[0_0_40px_rgba(255,77,109,0.7)] animate-pulse-soft ${
+              className={`rounded-full font-semibold transition-all duration-500 ${
                 isScrolled
-                  ? "bg-[#ff4d6d] hover:bg-[#ff4d6d]/90 text-white px-6 h-11 text-sm"
-                  : "bg-[#ff4d6d] hover:bg-[#ff4d6d]/90 text-white px-8 h-12"
+                  ? "bg-foreground hover:bg-foreground/90 text-background px-6 h-11 text-sm"
+                  : "bg-white hover:bg-white/90 text-black px-8 h-12"
               }`}
             >
               Book a Demo
@@ -149,7 +149,7 @@ export function Navigation() {
               Pricing
             </Button>
             <Button 
-              className="flex-1 bg-[#ff4d6d] hover:bg-[#ff4d6d]/90 text-white rounded-full h-14 text-base font-semibold animate-pulse-soft"
+              className="flex-1 bg-foreground text-background rounded-full h-14 text-base font-semibold"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Book a Demo

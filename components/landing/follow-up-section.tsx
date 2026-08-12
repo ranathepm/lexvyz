@@ -57,7 +57,7 @@ export function FollowUpSection() {
     <section
       id="follow-up"
       ref={sectionRef}
-      className="relative py-24 lg:py-32 overflow-hidden bg-[#141416]"
+      className="relative py-24 lg:py-32 overflow-hidden bg-[oklch(0.09_0.01_260)]"
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Header */}
@@ -73,7 +73,7 @@ export function FollowUpSection() {
           }`}>
             The money is in
             <br />
-            <span className="text-[#ff4d6d]">the follow-up.</span>
+            <span className="text-[#eca8d6]">the follow-up.</span>
           </h2>
           <p className={`mt-6 text-xl text-muted-foreground leading-relaxed max-w-2xl transition-all duration-1000 delay-100 ${
             isVisible ? "opacity-100" : "opacity-0"
@@ -92,7 +92,7 @@ export function FollowUpSection() {
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <span className="text-4xl lg:text-5xl font-display text-[#ff4d6d] block mb-3">
+              <span className="text-4xl lg:text-5xl font-display text-[#eca8d6] block mb-3">
                 {stat.value}
               </span>
               <span className="text-sm text-muted-foreground leading-relaxed">
