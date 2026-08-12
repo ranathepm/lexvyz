@@ -8,7 +8,7 @@ const integrations = [
   { name: "Retell AI", category: "Voice AI", logo: "/images/logos/retell.svg" },
   { name: "Bland AI", category: "Voice AI", logo: "/images/logos/bland.png" },
   { name: "ElevenLabs", category: "Voice AI", logo: "/images/logos/elevenlabs.png" },
-  { name: "PlayAI", category: "Voice AI", logo: "/images/logos/play.png" },
+  { name: "PlayAI", category: "Voice AI", logo: "/images/logos/play.svg" },
   { name: "Synthflow", category: "Voice AI", logo: "/images/logos/synthflow.png" },
   // LLMs
   { name: "OpenAI", category: "LLM", logo: "/images/logos/openai.png" },
@@ -129,14 +129,8 @@ export function IntegrationsSection() {
                   }}
                 />
               )}
-              {/* Category tag */}
-              <span className={`absolute top-3 right-3 text-[10px] font-mono px-2 py-0.5 transition-colors ${
-                hoveredIndex === index
-                  ? "bg-foreground text-background"
-                  : "bg-foreground/10 text-muted-foreground"
-              }`}>
-                {integration.category}
-              </span>
+              {/* Category tag — removed per design feedback */}
+              <span className="sr-only">{integration.category}</span>
 
               {/* Logo — official brand color, big, centered, no name below.
                   Capped at 64px; small sources render at natural size so

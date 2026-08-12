@@ -29,7 +29,7 @@ export function CtaSection() {
   };
 
   return (
-    <section ref={sectionRef} className="relative py-24 lg:py-32 overflow-hidden">
+    <section ref={sectionRef} className="relative pb-0 pt-24 lg:pt-32 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div
           className={`relative border border-foreground transition-all duration-1000 ${
@@ -97,6 +97,9 @@ export function CtaSection() {
           <div className="absolute bottom-0 left-0 w-32 h-32 border-t border-r border-foreground/10" />
         </div>
       </div>
+
+      {/* Fade into the footer banner below — smooth transition, no hard edge */}
+      <div className="relative h-24 lg:h-40 w-full bg-gradient-to-b from-transparent to-black pointer-events-none" aria-hidden="true" />
     </section>
   );
 }

@@ -181,6 +181,13 @@ export function FooterSection() {
             </span>
           </div>
         </div>
+
+        {/* Made-with-one-prompt credit */}
+        <div className="pb-8 -mt-2 flex justify-center">
+          <p className="text-xs text-white/25 font-mono">
+            Made with one prompt by LEXVYZ
+          </p>
+        </div>
       </div>
     </footer>
   );

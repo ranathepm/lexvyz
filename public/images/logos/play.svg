@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- PlayAI brand mark — white play glyph (on-dark variant) -->
+  <circle cx="32" cy="32" r="28" stroke="#ffffff" stroke-width="4"/>
+  <path d="M26 22 L44 32 L26 42 Z" fill="#ffffff"/>
+</svg>
