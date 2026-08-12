@@ -23,7 +23,7 @@ const features = [
 
 export function DevelopersSection() {
   const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLSection>(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -84,7 +84,7 @@ export function DevelopersSection() {
           }`}
         >
           <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-md">
-            One system, one accountable partner. We build, run, and optimize your entire client acquisition funnel — so you can get back to practicing law.
+            One system, one accountable partner. We build, run, and optimize your entire client acquisition funnel — measured in booked consultations and signed retainers, not dashboards.
           </p>
           <div className="grid grid-cols-2 gap-6">
             {features.map((feature, index) => (

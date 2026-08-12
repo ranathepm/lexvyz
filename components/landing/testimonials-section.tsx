@@ -10,6 +10,7 @@ const testimonials = [
     role: "Solo Practitioner",
     company: "Personal Injury",
     metric: { value: "40%", label: "More consults booked" },
+    avatar: "/images/faces/adam.jpg",
   },
   {
     quote: "Intake used to eat paralegal hours. Now conflict checks, case details, and scheduling happen in the first call — automatically.",
@@ -17,6 +18,7 @@ const testimonials = [
     role: "Managing Partner",
     company: "Family Law",
     metric: { value: "10x", label: "Faster intake files" },
+    avatar: "/images/faces/melissa.jpg",
   },
   {
     quote: "The follow-up sequences are the quiet winner. Leads that used to go cold now show up to their consultations.",
@@ -24,6 +26,7 @@ const testimonials = [
     role: "Office Manager",
     company: "Criminal Defense",
     metric: { value: "90%", label: "Consult attendance" },
+    avatar: "/images/faces/david.jpg",
   },
   {
     quote: "We were invisible in Google Maps. Three months in, we're in the 3-pack for every practice area we target.",
@@ -31,6 +34,7 @@ const testimonials = [
     role: "Partner",
     company: "Immigration Law",
     metric: { value: "3-pack", label: "Google Maps rankings" },
+    avatar: "/images/faces/sofia.jpg",
   },
 ];
 
@@ -155,10 +159,12 @@ export function TestimonialsSection() {
 
               {/* Author */}
               <div className="mt-12 flex items-center gap-6">
-                <div className="w-14 h-14 rounded-full bg-background/10 flex items-center justify-center">
-                  <span className="font-display text-xl">
-                    {activeTestimonial.author.charAt(0)}
-                  </span>
+                <div className="w-14 h-14 rounded-full overflow-hidden border border-background/20">
+                  <img
+                    src={activeTestimonial.avatar}
+                    alt={`${activeTestimonial.author} — ${activeTestimonial.company}`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <p className="text-lg font-medium">{activeTestimonial.author}</p>

@@ -56,7 +56,7 @@ export function AudioDemoPlayer() {
       {/* Label + waveform */}
       <div className="min-w-0">
         <p className="text-white text-sm font-medium mb-1.5 whitespace-nowrap">
-          Hear a real AI intake call
+          Real Time Call with AI
         </p>
         <div className="flex items-end gap-[3px] h-6" aria-hidden="true">
           {WAVE_BARS.map((h, i) => (

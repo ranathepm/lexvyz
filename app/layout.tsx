@@ -21,7 +21,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'LEXVYZ — Intelligent Agents. Real Results.',
+  title: 'LEXVYZ — More Clients. Bigger Turnover.',
   description: 'AI receptionists, client intake automation, high-converting websites, CRM follow-up, and local SEO for law firms. We sell recovered revenue, not AI.',
   generator: 'v0.app',
 }

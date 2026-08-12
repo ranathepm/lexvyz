@@ -165,7 +165,7 @@ export function HeroSection() {
         ))}
       </div>
       
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-12 py-32 lg:py-40">
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-12 pt-32 lg:pt-40 pb-64 lg:pb-72">
         <div className="lg:max-w-[55%]">
         {/* Eyebrow */}
         <div 
@@ -175,7 +175,7 @@ export function HeroSection() {
         >
           <span className="inline-flex items-center gap-3 text-sm font-mono text-white/60">
             <span className="w-8 h-px bg-white/30" />
-            Intelligent agents. Real results.
+            More Clients. Bigger Turnover.
           </span>
         </div>
         
@@ -186,7 +186,10 @@ export function HeroSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <span className="block whitespace-nowrap">Never miss a call.</span>
+            <span className="block whitespace-nowrap">
+              Never miss a{" "}
+              <span className="text-[#ff4d6d]">LEAD.</span>
+            </span>
             <span className="block whitespace-nowrap">
               Never lose a{" "}
               <span className="relative inline-block">
@@ -204,6 +207,35 @@ export function HeroSection() {
         >
           <AudioDemoPlayer />
         </div>
+
+        {/* Hero CTA row — the main conversion action */}
+        <div
+          className={`flex flex-col sm:flex-row items-start gap-4 mb-10 transition-all duration-1000 delay-500 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          <a
+            href="#pricing"
+            className="inline-flex items-center justify-center gap-2 bg-[#ff4d6d] hover:bg-[#ff4d6d]/90 text-white font-semibold text-lg px-10 h-16 rounded-full shadow-[0_0_30px_rgba(255,77,109,0.5)] hover:shadow-[0_0_50px_rgba(255,77,109,0.75)] transition-all animate-pulse-soft"
+          >
+            Book a Demo
+          </a>
+          <a
+            href="#how-it-works"
+            className="inline-flex items-center justify-center gap-2 border border-white/25 hover:border-white/60 text-white font-medium text-lg px-10 h-16 rounded-full transition-colors"
+          >
+            Get a Free AI Audit
+          </a>
+        </div>
+
+        {/* ROI hook line */}
+        <p
+          className={`text-white/50 text-sm font-mono transition-all duration-1000 delay-700 ${
+            isVisible ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          Built to recover the revenue your firm is losing today — not to sell you tech.
+        </p>
         </div>
       </div>
       

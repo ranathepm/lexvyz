@@ -202,4 +202,13 @@
     50%  { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
   }
+
+  .animate-pulse-soft {
+    animation: pulse-soft 2.2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% { box-shadow: 0 0 18px rgba(255, 77, 109, 0.35); }
+    50% { box-shadow: 0 0 38px rgba(255, 77, 109, 0.7); }
+  }
 }

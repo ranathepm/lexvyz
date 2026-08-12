@@ -57,16 +57,16 @@ export function CtaSection() {
                 </h2>
 
                 <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-xl">
-                  Every missed call is a case walking to your competitor. 
-                  Let&apos;s put your client acquisition on autopilot — starting with a free intake audit.
+                  Every missed call is a case walking to your competitor — that&apos;s revenue you already paid for. 
+                  We don&apos;t sell you AI. We sell you back the money your firm is losing today.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-start gap-4">
                   <Button
                     size="lg"
-                    className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group"
+                    className="bg-[#ff4d6d] hover:bg-[#ff4d6d]/90 text-white px-8 h-14 text-base rounded-full group font-semibold shadow-[0_0_30px_rgba(255,77,109,0.5)] animate-pulse-soft"
                   >
-                    Book a demo
+                    Book a Demo
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                   </Button>
                   <Button
@@ -74,12 +74,12 @@ export function CtaSection() {
                     variant="outline"
                     className="h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5"
                   >
-                    Get a free audit
+                    Get a Free AI Audit
                   </Button>
                 </div>
 
                 <p className="text-sm text-muted-foreground mt-8 font-mono">
-                  15 minutes with our team is enough to size your funnel
+                  15 min on Google Meet → we show you exactly what your firm is leaving on the table
                 </p>
               </div>
 

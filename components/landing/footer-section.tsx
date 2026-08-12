@@ -124,7 +124,7 @@ export function FooterSection() {
               </a>
 
               <p className="text-white/50 leading-relaxed mb-8 max-w-xs text-sm">
-                Intelligent agents. Real results. AI automation and digital marketing for law firms — we sell recovered revenue, not AI.
+                More clients. Bigger turnover. AI automation and digital marketing for law firms — we sell recovered revenue, not AI.
               </p>
 
               {/* Social Links */}

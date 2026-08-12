@@ -7,8 +7,9 @@ const plans = [
   {
     name: "Basic",
     description: "For the firm that just needs to stop missing calls.",
-    price: { monthly: 297, annual: 297 },
+    price: { monthly: 397, annual: 397 },
     setupFee: 1500,
+    roi: "Hypothetically, even 1 extra case a year covers this. 2 extra cases could mean $10K+ more revenue.",
     features: [
       "AI chatbot — 24/7 lead capture",
       "Basic CRM (GoHighLevel) setup",
@@ -22,12 +23,14 @@ const plans = [
   {
     name: "Recommended",
     description: "The complete client capture system — every lead, every time.",
-    price: { monthly: 697, annual: 697 },
+    price: { monthly: 797, annual: 797 },
     setupFee: 2500,
+    roi: "The most popular choice. Hypothetically, 40–60% more consultations from your existing call volume can translate into $50K–$150K+ in recovered revenue a year.",
     features: [
       "AI voice receptionist — 24/7",
       "AI client intake + qualification",
       "AI chatbot (website + SMS)",
+      "Follow-up sequence automation",
       "Full legal CRM + pipeline",
       "Email + SMS automation",
       "Missed-call text-back",
@@ -36,12 +39,14 @@ const plans = [
     ],
     cta: "Get Recommended",
     highlight: true,
+    badge: "Most Popular",
   },
   {
     name: "Premium",
     description: "The full-stack growth engine — we build, run, and optimize everything.",
-    price: { monthly: 1497, annual: 1497 },
+    price: { monthly: 2797, annual: 2797 },
     setupFee: 4000,
+    roi: "For firms ready to dominate. Hypothetically, a 3-pack ranking + review engine can bring 5–15 new qualified leads a month — each worth $3K–$15K.",
     features: [
       "Everything in Recommended",
       "Custom high-converting website",
@@ -124,9 +129,9 @@ export function PricingSection() {
                 {/* Popular badge */}
                 {plan.highlight && (
                   <div className="absolute -top-4 left-8 right-8 flex justify-center">
-                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-foreground text-background text-xs font-mono uppercase tracking-widest">
+                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#ff4d6d] text-white text-xs font-mono uppercase tracking-widest rounded-full shadow-[0_0_20px_rgba(255,77,109,0.5)]">
                       <Zap className="w-3 h-3" />
-                      Most Popular
+                      {plan.badge ?? "Most Popular"}
                     </span>
                   </div>
                 )}
@@ -161,7 +166,7 @@ export function PricingSection() {
                   </div>
 
                   {/* Features */}
-                  <ul className="space-y-3 mb-10">
+                  <ul className="space-y-3 mb-6">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
                         <Check className="w-4 h-4 text-[#ff4d6d] mt-0.5 shrink-0" />
@@ -169,6 +174,18 @@ export function PricingSection() {
                       </li>
                     ))}
                   </ul>
+
+                  {/* Hypothetical ROI line */}
+                  {plan.roi && (
+                    <div className="mb-8 p-4 border border-[#ff4d6d]/25 bg-[#ff4d6d]/[0.05]">
+                      <p className="text-xs text-muted-foreground leading-relaxed">
+                        <span className="text-[#ff4d6d] font-mono uppercase tracking-wider text-[10px] block mb-1">
+                          Hypothetical ROI
+                        </span>
+                        {plan.roi}
+                      </p>
+                    </div>
+                  )}
 
                   {/* CTA */}
                   <button

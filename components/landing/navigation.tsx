@@ -10,6 +10,7 @@ const navLinks = [
   { name: "Markets",      href: "#infra"          },
   { name: "Integrations", href: "#integrations"  },
   { name: "Trust",        href: "#security"      },
+  { name: "Pricing",      href: "#pricing"       },
 ];
 
 export function Navigation() {
@@ -72,14 +73,18 @@ export function Navigation() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <a href="#" className={`transition-all duration-500 ${isScrolled ? "text-xs text-foreground/70 hover:text-foreground" : "text-sm text-white/70 hover:text-white"}`}>
-              Sign in
+            <a href="#pricing" className={`transition-all duration-500 ${isScrolled ? "text-xs text-foreground/70 hover:text-foreground" : "text-sm text-white/70 hover:text-white"}`}>
+              Pricing
             </a>
             <Button
-              size="sm"
-              className={`rounded-full transition-all duration-500 ${isScrolled ? "bg-foreground hover:bg-foreground/90 text-background px-4 h-8 text-xs" : "bg-white hover:bg-white/90 text-black px-6"}`}
+              size="lg"
+              className={`rounded-full font-semibold transition-all duration-500 shadow-[0_0_24px_rgba(255,77,109,0.45)] hover:shadow-[0_0_40px_rgba(255,77,109,0.7)] animate-pulse-soft ${
+                isScrolled
+                  ? "bg-[#ff4d6d] hover:bg-[#ff4d6d]/90 text-white px-6 h-11 text-sm"
+                  : "bg-[#ff4d6d] hover:bg-[#ff4d6d]/90 text-white px-8 h-12"
+              }`}
             >
-              Book a demo
+              Book a Demo
             </Button>
           </div>
 
@@ -141,13 +146,13 @@ export function Navigation() {
               className="flex-1 rounded-full h-14 text-base"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Sign in
+              Pricing
             </Button>
             <Button 
-              className="flex-1 bg-foreground text-background rounded-full h-14 text-base"
+              className="flex-1 bg-[#ff4d6d] hover:bg-[#ff4d6d]/90 text-white rounded-full h-14 text-base font-semibold animate-pulse-soft"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Book a demo
+              Book a Demo
             </Button>
           </div>
         </div>

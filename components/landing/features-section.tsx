@@ -171,16 +171,16 @@ export function FeaturesSection() {
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
-                Your firm&apos;s
+                More Calls.
                 <br />
-                <span className="text-muted-foreground">growth engine.</span>
+                <span className="text-muted-foreground">More Cases. More Money.</span>
               </h2>
             </div>
             <div className="lg:col-span-5 lg:pb-4">
               <p className={`text-xl text-muted-foreground leading-relaxed transition-all duration-1000 delay-200 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}>
-                We plug the leaks in your client acquisition funnel — missed calls, slow follow-ups, and broken intake. Every lead captured, qualified, and converted.
+                When someone calls your firm, you want to talk to them. If you don&apos;t, they call another lawyer. We make sure every call gets answered, every lead gets followed up, and no money walks out the door.
               </p>
             </div>
           </div>

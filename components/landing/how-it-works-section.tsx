@@ -5,9 +5,9 @@ import { useEffect, useRef, useState } from "react";
 const steps = [
   {
     number: "01",
-    title: "Audit",
-    subtitle: "your funnel",
-    description: "We audit your front office: missed calls, intake forms, follow-up speed, and website conversion. We quantify the revenue leaking out the door.",
+    title: "AI Readiness Audit",
+    subtitle: "FREE — 15 min call",
+    description: "FREE of cost. We hop on a quick 15-minute Google Meet, look at how your firm handles calls and leads today, and show you exactly what's leaking revenue.",
     code: `const firm = new LEXVYZ.audit({
   practiceAreas: ['PI', 'family', 'criminal'],
   callVolume: 'missed 40%',
@@ -87,10 +87,19 @@ export function HowItWorksSection() {
             <h2 className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.85] transition-all duration-1000 delay-100 ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
             }`}>
-              <span className="block">Audit.</span>
+              <span className="block">AI Audit.</span>
               <span className="block text-white/30">Build.</span>
               <span className="block text-white/10">Grow.</span>
             </h2>
+            {/* FREE badge */}
+            <div className={`mt-8 inline-flex items-center gap-3 transition-all duration-1000 delay-200 ${
+              isVisible ? "opacity-100" : "opacity-0"
+            }`}>
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#ff4d6d]/15 text-[#ff4d6d] border border-[#ff4d6d]/40 text-sm font-mono">
+                <span className="w-2 h-2 rounded-full bg-[#ff4d6d] animate-pulse" />
+                100% FREE — 15-min Google Meet
+              </span>
+            </div>
           </div>
 
           {/* Image cerisier — se colle en bas sur les blocs */}
