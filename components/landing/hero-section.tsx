@@ -188,7 +188,7 @@ export function HeroSection() {
           >
             <span className="block whitespace-nowrap">
               Never miss a{" "}
-              <span className="text-[#eca8d6]">LEAD.</span>
+              <span className="text-white">LEAD.</span>
             </span>
             <span className="block whitespace-nowrap">
               Never lose a{" "}

@@ -95,8 +95,8 @@ export function HowItWorksSection() {
             <div className={`mt-8 inline-flex items-center gap-3 transition-all duration-1000 delay-200 ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#eca8d6]/15 text-[#eca8d6] border border-[#eca8d6]/40 text-sm font-mono">
-                <span className="w-2 h-2 rounded-full bg-[#eca8d6] animate-pulse" />
+              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/25 text-white text-sm font-mono gradient-bg">
+                <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
                 100% FREE — 15-min Google Meet
               </span>
             </div>

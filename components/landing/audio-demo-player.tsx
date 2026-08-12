@@ -37,14 +37,14 @@ export function AudioDemoPlayer() {
   };
 
   return (
-    <div className="inline-flex items-center gap-5 border border-white/15 bg-white/[0.04] backdrop-blur-md rounded-xl px-5 py-4 max-w-full">
+    <div className="inline-flex items-center gap-5 border border-white/15 bg-white/[0.04] backdrop-blur-md rounded-3xl px-5 py-4 max-w-full">
       <audio ref={audioRef} src={AUDIO_SRC} preload="none" />
 
-      {/* Play / Pause button */}
+      {/* Play / Pause button — animated multicolor gradient, same as hero word */}
       <button
         onClick={togglePlay}
         aria-label={isPlaying ? "Pause demo call" : "Play demo call"}
-        className="shrink-0 w-12 h-12 rounded-full bg-[#eca8d6] hover:bg-[#eca8d6]/85 text-white flex items-center justify-center transition-colors"
+        className="shrink-0 w-12 h-12 rounded-full gradient-bg text-white flex items-center justify-center shadow-[0_0_20px_rgba(167,139,250,0.5)]"
       >
         {isPlaying ? (
           <Pause className="w-5 h-5" />

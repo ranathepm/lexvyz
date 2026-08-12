@@ -198,6 +198,21 @@
     animation: gradient-shift 1.5s ease infinite;
   }
 
+  /* Same animated multicolor gradient, but as a solid background
+     (used for the audio play button + FREE badge) */
+  .gradient-bg {
+    background: linear-gradient(
+      45deg,
+      #eca8d6 0%,
+      #a78bfa 25%,
+      #67e8f9 50%,
+      #fbbf24 75%,
+      #eca8d6 100%
+    );
+    background-size: 300% 300%;
+    animation: gradient-shift 1.5s ease infinite;
+  }
+
   @keyframes gradient-shift {
     0%   { background-position: 0% 50%; }
     50%  { background-position: 100% 50%; }
